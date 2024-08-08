@@ -415,3 +415,48 @@ body.dark-mode .metallic-title {
 body.dark-mode .metallic-title::before {
   background: linear-gradient(120deg, transparent, rgba(0, 0, 0, 0.8), transparent); /* Efecto más oscuro, casi negro */
 }
+* Estilo del botón de modo oscuro */
+.btn-dark-mode {
+  background-color: #000000; /* Botón negro */
+  color: white !important;
+  border: none !important;
+  box-shadow: none; /* Sin sombra */
+}
+
+/* Estilo del botón de modo claro */
+.btn-light-mode {
+  background-color: #ffffff; /* Botón blanco brillante */
+  color: black !important;
+  border: 1px solid #ffffff !important; /* Borde del mismo color que el botón */
+  box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff; /* Efecto de brillo */
+}
+
+.btn-light-mode:hover {
+  background-color: #f2f2f2; /* Un poco más oscuro al pasar el mouse */
+
+}
+/* Botón de Dark Mode */
+.dark-mode-toggle {
+  background-color: #333; /* Negro en modo claro */
+  color: white !important;
+  border: none !important; /* Eliminar el borde */
+  border-radius: 30px !important;
+  padding: 10px 20px !important;
+  transition: background-color 0.3s !important;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #444; /* Color más claro al pasar el mouse en modo claro */
+}
+
+/* Botón de Dark Mode en modo oscuro */
+body.dark-mode .dark-mode-toggle {
+  background-color: #ffffff; /* Botón blanco brillante */
+  color: black !important;
+  box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff; /* Efecto de brillo */
+  border: none !important; /* Eliminar el borde negro */
+}
+
+body.dark-mode .dark-mode-toggle:hover {
+  background-color: #f2f2f2; /* Un poco más oscuro al pasar el mouse */
+}
