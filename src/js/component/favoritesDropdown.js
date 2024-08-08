@@ -11,37 +11,56 @@ const FavoritesDropdown = () => {
         setIsOpen(newState);
     };
 
-    const handleRemoveFavorite = (uid, e) => {
+    const handleRemoveFavoriteCharacter = (uid, e) => {
         e.stopPropagation();
-        actions.removeFavorite(uid);
+        actions.removeFavoriteCharacter(uid);
     };
 
-    return (
-        <div className="dropdown-container">
-            <Dropdown show={isOpen} onToggle={handleToggle}>
-                <Dropdown.Toggle className="dropdown-toggle-custom" id="dropdown-basic" onClick={() => setIsOpen(!isOpen)}>
-                    Favorites {store.favorites.length}
-                </Dropdown.Toggle>
+    const handleRemoveFavoritePlanet = (uid, e) => {
+        e.stopPropagation();
+        actions.removeFavoritePlanet(uid);
+    };
 
-                <Dropdown.Menu>
-                    {store.favorites.length === 0 ? (
-                        <Dropdown.Item>No favorites added</Dropdown.Item>
-                    ) : (
-                        store.favorites.map((fav, index) => (
+    const favoriteCharacters = store.favoriteCharacters || [];
+    const favoritePlanets = store.favoritePlanets || [];
+
+    return (
+        <Dropdown show={isOpen} onToggle={handleToggle} className="dropdown-container">
+            <Dropdown.Toggle variant="success" id="dropdown-basic" onClick={() => setIsOpen(!isOpen)}>
+                Favorites {favoriteCharacters.length + favoritePlanets.length}
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu>
+                {favoriteCharacters.length === 0 && favoritePlanets.length === 0 ? (
+                    <Dropdown.Item>No favorites added</Dropdown.Item>
+                ) : (
+                    <>
+                        {favoriteCharacters.map((fav, index) => (
                             <Dropdown.Item key={index} className="d-flex justify-content-between align-items-center">
                                 <Link to={`/character/${fav.uid}`}>{fav.properties.name}</Link>
                                 <Button
                                     variant="link"
-                                    onClick={(e) => handleRemoveFavorite(fav.uid, e)}
+                                    onClick={(e) => handleRemoveFavoriteCharacter(fav.uid, e)}
                                 >
                                     <i className="fas fa-trash-alt text-danger"></i>
                                 </Button>
                             </Dropdown.Item>
-                        ))
-                    )}
-                </Dropdown.Menu>
-            </Dropdown>
-        </div>
+                        ))}
+                        {favoritePlanets.map((fav, index) => (
+                            <Dropdown.Item key={index} className="d-flex justify-content-between align-items-center">
+                                <Link to={`/planet/${fav.uid}`}>{fav.properties.name}</Link>
+                                <Button
+                                    variant="link"
+                                    onClick={(e) => handleRemoveFavoritePlanet(fav.uid, e)}
+                                >
+                                    <i className="fas fa-trash-alt text-danger"></i>
+                                </Button>
+                            </Dropdown.Item>
+                        ))}
+                    </>
+                )}
+            </Dropdown.Menu>
+        </Dropdown>
     );
 };
 

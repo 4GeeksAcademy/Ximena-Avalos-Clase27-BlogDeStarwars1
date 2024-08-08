@@ -2,7 +2,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 	  store: {
 		people: [],
-		favorites: []
+		planets: [],
+		favoriteCharacters: [],
+        favoritePlanets: [],
 	  },
 	  actions: {
 		loadPeople: () => {
@@ -25,16 +27,45 @@ const getState = ({ getStore, getActions, setStore }) => {
 			  })
 			  .catch(err => console.error("Error fetching people:", err));
 		  },
-		  addFavorite: (character) => {
+		  loadPlanets: () => {
+			fetch("https://www.swapi.tech/api/planets")
+				.then(res => res.json())
+				.then(data => {
+					if (data.results) {
+						const planetPromises = data.results.map(result =>
+							fetch(result.url)
+								.then(res => res.json())
+								.then(detailData => detailData.result)
+						);
+						Promise.all(planetPromises)
+							.then(planets => {
+								setStore({ planets });
+							});
+					}
+				})
+				.catch(err => console.error("Error fetching planets:", err));
+		},
+		addFavoriteCharacter: (character) => {
 			const store = getStore();
-			if (!store.favorites.find(fav => fav.uid === character.uid)) {
-			  setStore({ favorites: [...store.favorites, character] });
-			}
-		  },
-		  removeFavorite: (uid) => {
+			setStore({ favoriteCharacters: [...store.favoriteCharacters, character] });
+		},
+
+		removeFavoriteCharacter: (uid) => {
 			const store = getStore();
-			setStore({ favorites: store.favorites.filter(fav => fav.uid !== uid) });
-		  },
+			setStore({ favoriteCharacters: store.favoriteCharacters.filter(fav => fav.uid !== uid) });
+		},
+
+		addFavoritePlanet: (planet) => {
+			const store = getStore();
+			setStore({ favoritePlanets: [...store.favoritePlanets, planet] });
+		},
+
+		removeFavoritePlanet: (uid) => {
+			const store = getStore();
+			setStore({ favoritePlanets: store.favoritePlanets.filter(fav => fav.uid !== uid) });
+		},
+
+		  
 	  }
 	};
   };

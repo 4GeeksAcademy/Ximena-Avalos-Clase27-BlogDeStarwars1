@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';  
 import { Context } from '../store/appContext';
 import '../../styles/styles.css'; 
-import imageUrls from '../component/imageUrls';
 
 const CharacterDetails = () => {
     const { id } = useParams();
@@ -26,7 +25,7 @@ const CharacterDetails = () => {
     return (
       <div className="container detail-container">
         <div className="img-container">
-          <img src={imageUrls[character.name] || "https://via.placeholder.com/800x600"} alt={character.name} className="img-fluid" />
+          <img src={`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`} alt={character.name} className="img-fluid" />
         </div>
         <div className="info-container">
           <h1>{character.name}</h1>

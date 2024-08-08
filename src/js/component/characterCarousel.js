@@ -11,7 +11,8 @@ const CharacterCarousel = () => {
       actions.loadPeople();
     }, []);
   
-    console.log("Store people data:", store.people);  // Log de los datos en el store
+    console.log("Store people data:", store.people);  
+
   
     return (
       <div className="main">
