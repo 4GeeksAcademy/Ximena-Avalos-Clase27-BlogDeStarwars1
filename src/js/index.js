@@ -4,6 +4,7 @@ import {createRoot} from 'react-dom/client'
 
 //include your index.scss file into the bundle
 import "../styles/index.css";
+import "../styles/customStyles.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 //import your own components
