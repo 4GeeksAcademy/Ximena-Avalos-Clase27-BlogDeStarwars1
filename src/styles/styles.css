@@ -75,7 +75,7 @@
 /* Button Styles */
 .button-custom, .back-button {
   background-color: #ff6f61;
-  color: white;
+  color: white; /* Texto en blanco para modo claro */
   border: none;
   border-radius: 30px;
   padding: 10px 25px;
@@ -173,7 +173,7 @@
 }
 
 .dropdown-toggle {
-  background-color: #ff6f61 !important;
+  background-color: #ff6f61 !important; /* Mismo color que el botón de Learn More */
   color: white !important;
   border: none !important;
   border-radius: 30px !important;
@@ -182,7 +182,7 @@
 }
 
 .dropdown-toggle:hover {
-  background-color: #ff3b2f !important;
+  background-color: #ff3b2f !important; /* Color más oscuro al pasar el mouse */
 }
 
 /* Media Queries */
@@ -208,9 +208,8 @@
   }
 }
 
-
 .small-navbar {
-    padding: 0.5rem 1rem; 
+  padding: 0.5rem 1rem; 
 }
 
 .navbar .container {
@@ -230,7 +229,6 @@
 .logo-img {
   height: 80px; 
 }
-
 
 .main {
   text-align: center; 
@@ -260,4 +258,239 @@
 
 .metallic-title:hover::before {
   left: 100%;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #000;
+  color: #fff;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+body.dark-mode .card, 
+body.dark-mode .card-custom {
+  background-color: transparent; /* Fondo transparente */
+  border: 1px solid #333;
+}
+
+body.dark-mode .card-body, 
+body.dark-mode .card-body-custom {
+  background-color: rgba(0, 0, 0, 0.6); /* Negro más translúcido */
+  color: #ffffff; /* Texto más blanco */
+}
+
+body.dark-mode .card-title-custom, 
+body.dark-mode .card-text-custom {
+  color: #ffffff; /* Texto completamente blanco */
+}
+
+body.dark-mode .button-custom, 
+body.dark-mode .back-button, 
+body.dark-mode .dropdown-toggle {
+  background-color: #00ffff; /* Azul fluorescente brillante */
+  color: black !important; /* Texto en negro */
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff; /* Efecto de brillo */
+}
+
+body.dark-mode .button-custom:hover, 
+body.dark-mode .back-button:hover, 
+body.dark-mode .dropdown-toggle:hover {
+  background-color: #00ccff; /* Azul más oscuro al pasar el mouse */
+}
+
+body.dark-mode .button-favorite-custom {
+  color: #00ffff; /* Azul fluorescente brillante */
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff; /* Efecto de brillo */
+}
+
+body.dark-mode .button-favorite-custom:hover {
+  color: #00ccff; /* Azul más oscuro al pasar el mouse */
+}
+
+body.dark-mode .navbar {
+  background-color: #111 !important;
+}
+
+/* Starfield background */
+body.dark-mode::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://img.freepik.com/fotos-premium/fondo-cielo-estrellado-oscuro_118086-762.jpg') no-repeat center center fixed;
+  background-size: cover;
+  z-index: -1;
+  opacity: 0.8; /* Ajusta la opacidad según sea necesario */
+  filter: contrast(1.2); /* Añade un poco de contraste */
+}
+
+body.dark-mode .dark-mode-toggle {
+  background-color: #ffffff; /* Botón blanco brillante */
+  color: black !important;
+  box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff; /* Efecto de brillo */
+}
+
+body.dark-mode .dark-mode-toggle:hover {
+  background-color: #f2f2f2; /* Un poco más oscuro al pasar el mouse */
+}
+
+/* Ajustes adicionales para botones en modo claro */
+.button-custom {
+  background-color: #ff6f61;
+  color: white; /* Texto en blanco para modo claro */
+  border: none;
+  border-radius: 30px;
+  padding: 10px 25px;
+  transition: background-color 0.3s;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button-custom:hover {
+  background-color: #ff3b2f;
+}
+
+/* Ajustes específicos para el dropdown en modo claro */
+.dropdown-toggle {
+  background-color: #ff6f61 !important; /* Mismo color que el botón de Learn More */
+  color: white !important;
+  border: none !important;
+  border-radius: 30px !important;
+  padding: 10px 20px !important;
+  transition: background-color 0.3s !important;
+}
+
+.dropdown-toggle:hover {
+  background-color: #ff3b2f !important; /* Color más oscuro al pasar el mouse */
+}
+/* Ajustes específicos para el dropdown en modo oscuro */
+body.dark-mode .dropdown-toggle {
+  background-color: #00ffff !important; /* Azul fluorescente brillante */
+  color: black !important; /* Texto en negro */
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff; /* Efecto de brillo */
+}
+
+body.dark-mode .dropdown-toggle:hover {
+  background-color: #00ccff !important; /* Azul más oscuro al pasar el mouse */
+}
+/* Estilo del título */
+.metallic-title {
+  color: rgba(255, 111, 97, 0.8); /* Color base translúcido más vivo */
+  font-family: 'Playfair Display', serif; /* Fuente para el título */
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  font-size: 6em; /* Tamaño del texto */
+  font-weight: bold;
+  margin: 0;
+}
+
+.metallic-title::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(0, 0, 0, 0.8), transparent); /* Efecto más oscuro, casi negro */
+  transition: left 0.5s;
+}
+
+.metallic-title:hover::before {
+  left: 100%;
+}
+
+/* Estilo del título en modo oscuro */
+body.dark-mode .metallic-title {
+  color: #00ffff; /* Azul fluorescente brillante */
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff; /* Efecto de brillo */
+}
+body.dark-mode .dark-mode-toggle {
+  background-color: #ffffff; /* Botón blanco brillante */
+  color: black !important;
+  box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff; /* Efecto de brillo */
+}
+
+body.dark-mode .dark-mode-toggle:hover {
+  background-color: #f2f2f2; /* Un poco más oscuro al pasar el mouse */
+}
+
+/* Ajustes adicionales para botones en modo claro */
+.button-custom {
+  background-color: #ff6f61;
+  color: white; /* Texto en blanco para modo claro */
+  border: none;
+  border-radius: 30px;
+  padding: 10px 25px;
+  transition: background-color 0.3s;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button-custom:hover {
+  background-color: #ff3b2f;
+}
+
+/* Ajustes específicos para el dropdown en modo claro */
+.dropdown-toggle {
+  background-color: #ff6f61 !important; /* Mismo color que el botón de Learn More */
+  color: white !important;
+  border: none !important;
+  border-radius: 30px !important;
+  padding: 10px 20px !important;
+  transition: background-color 0.3s !important;
+}
+
+.dropdown-toggle:hover {
+  background-color: #ff3b2f !important; /* Color más oscuro al pasar el mouse */
+}
+
+/* Ajustes específicos para el dropdown en modo oscuro */
+body.dark-mode .dropdown-toggle {
+  background-color: #00ffff !important; /* Azul fluorescente brillante */
+  color: black !important; /* Texto en negro */
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff; /* Efecto de brillo */
+}
+
+body.dark-mode .dropdown-toggle:hover {
+  background-color: #00ccff !important; /* Azul más oscuro al pasar el mouse */
+}
+
+/* Estilo del título */
+.metallic-title {
+  color: rgba(255, 111, 97, 0.8); /* Color base translúcido más vivo */
+  font-family: 'Playfair Display', serif; /* Fuente para el título */
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  font-size: 6em; /* Tamaño del texto */
+  font-weight: bold;
+  margin: 0;
+}
+
+.metallic-title::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(0, 0, 0, 0.8), transparent); /* Efecto más oscuro, casi negro */
+  transition: left 0.5s;
+}
+
+.metallic-title:hover::before {
+  left: 100%;
+}
+
+/* Estilo del título en modo oscuro */
+body.dark-mode .metallic-title {
+  color: #00ffff; /* Azul fluorescente brillante */
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff; /* Efecto de brillo */
 }
