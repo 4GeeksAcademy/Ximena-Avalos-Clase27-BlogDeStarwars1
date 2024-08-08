@@ -460,3 +460,19 @@ body.dark-mode .dark-mode-toggle {
 body.dark-mode .dark-mode-toggle:hover {
   background-color: #f2f2f2; /* Un poco más oscuro al pasar el mouse */
 }
+/* Estilos para la tabla de detalles en modo oscuro */
+body.dark-mode .detail-table {
+  background-color: rgba(0, 0, 0, 0.6); /* Negro translúcido */
+  color: #ffffff; /* Texto blanco */
+}
+
+body.dark-mode .detail-table th, 
+body.dark-mode .detail-table td {
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo negro translúcido */
+  color: #ffffff; /* Texto blanco */
+  border-bottom: 1px solid #ffffff; /* Bordes blancos */
+}
+
+body.dark-mode .detail-table th {
+  background-color: rgba(0, 0, 0, 0.8); /* Negro más oscuro para encabezados */
+}
