@@ -6,9 +6,12 @@ import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
+import CharacterDetails from "./views/characterDetails";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import CharacterCarousel from './component/characterCarousel';
+
 
 //create your first component
 const Layout = () => {
@@ -22,6 +25,8 @@ const Layout = () => {
 				<ScrollToTop>
 					<Navbar />
 					<Routes>
+						<Route path="/" element={<CharacterCarousel />} />
+						<Route path="/character/:id" element={<CharacterDetails />} />
 						<Route path="/" element={<Home />} />
 						<Route path="/demo" element={<Demo />} />
 						<Route path="/single/:theid" element={<Single />} />
