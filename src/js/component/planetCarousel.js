@@ -11,7 +11,7 @@ const PlanetCarousel = () => {
         actions.loadPlanets();
     }, []);
 
-    console.log("Store planet data:", store.planets);  // Log de los datos en el store
+    console.log("Store planet data:", store.planets);  
 
     return (
         <div className="main">

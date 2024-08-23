@@ -7,7 +7,7 @@ export const Navbar = () => {
     const [isDarkMode, setIsDarkMode] = useState(false);
 
     useEffect(() => {
-        // Verificar el modo inicial según la clase en el cuerpo
+       
         const initialMode = document.body.classList.contains('dark-mode');
         setIsDarkMode(initialMode);
     }, []);

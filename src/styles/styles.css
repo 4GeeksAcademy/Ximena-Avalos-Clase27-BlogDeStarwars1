@@ -1,4 +1,4 @@
-/* General Styles */
+
 .main {
   max-width: 75rem;
   padding: 3em 1.5em;
@@ -25,7 +25,7 @@
   padding-bottom: 1.5em;
 }
 
-/* Card Styles */
+
 .card, .card-custom {
   flex: 0 0 auto;
   width: 14rem;
@@ -72,10 +72,9 @@
   color: #666666;
 }
 
-/* Button Styles */
 .button-custom, .back-button {
   background-color: #ff6f61;
-  color: white; /* Texto en blanco para modo claro */
+  color: white; 
   border: none;
   border-radius: 30px;
   padding: 10px 25px;
@@ -99,7 +98,7 @@
   color: #ff3b2f;
 }
 
-/* Detail Container Styles */
+
 .detail-container {
   margin-top: 50px;
   display: flex;
@@ -133,7 +132,7 @@
   object-fit: cover;
 }
 
-/* Detail Table Styles */
+
 .detail-table {
   width: 100%;
   margin-top: 20px;
@@ -166,7 +165,7 @@
   border-bottom: none;
 }
 
-/* Dropdown Styles */
+
 .dropdown-container {
   margin-right: -40px;
   display: inline-block;
@@ -174,7 +173,7 @@
 }
 
 .dropdown-toggle {
-  background-color: #ff6f61 !important; /* Mismo color que el botón de Learn More */
+  background-color: #ff6f61 !important; 
   color: white !important;
   border: none !important;
   border-radius: 30px !important;
@@ -183,10 +182,9 @@
 }
 
 .dropdown-toggle:hover {
-  background-color: #ff3b2f !important; /* Color más oscuro al pasar el mouse */
+  background-color: #ff3b2f !important; 
 }
 
-/* Media Queries */
 @media (min-width: 768px) {
   .detail-container {
       flex-direction: row;
@@ -236,12 +234,12 @@
 }
 
 .metallic-title {
-  color: rgba(255, 111, 97, 0.8); /* Color base translúcido más vivo */
-  font-family: 'Playfair Display', serif; /* Fuente para el título */
+  color: rgba(255, 111, 97, 0.8); 
+  font-family: 'Playfair Display', serif; 
   position: relative;
   display: inline-block;
   overflow: hidden;
-  font-size: 6em; /* Tamaño del texto */
+  font-size: 6em; 
   font-weight: bold;
   margin: 0;
 }
@@ -261,7 +259,7 @@
   left: 100%;
 }
 
-/* Dark Mode Styles */
+
 body.dark-mode {
   background-color: #000;
   color: #fff;
@@ -270,49 +268,49 @@ body.dark-mode {
 
 body.dark-mode .card, 
 body.dark-mode .card-custom {
-  background-color: transparent; /* Fondo transparente */
+  background-color: transparent; 
   border: 1px solid #333;
 }
 
 body.dark-mode .card-body, 
 body.dark-mode .card-body-custom {
-  background-color: rgba(0, 0, 0, 0.6); /* Negro más translúcido */
-  color: #ffffff; /* Texto más blanco */
+  background-color: rgba(0, 0, 0, 0.6); 
+  color: #ffffff; 
 }
 
 body.dark-mode .card-title-custom, 
 body.dark-mode .card-text-custom {
-  color: #ffffff; /* Texto completamente blanco */
+  color: #ffffff; 
 }
 
 body.dark-mode .button-custom, 
 body.dark-mode .back-button, 
 body.dark-mode .dropdown-toggle {
-  background-color: #00ffff; /* Azul fluorescente brillante */
-  color: black !important; /* Texto en negro */
-  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff; /* Efecto de brillo */
+  background-color: #00ffff; 
+  color: black !important; 
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff; 
 }
 
 body.dark-mode .button-custom:hover, 
 body.dark-mode .back-button:hover, 
 body.dark-mode .dropdown-toggle:hover {
-  background-color: #00ccff; /* Azul más oscuro al pasar el mouse */
+  background-color: #00ccff; 
 }
 
 body.dark-mode .button-favorite-custom {
-  color: #00ffff; /* Azul fluorescente brillante */
-  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff; /* Efecto de brillo */
+  color: #00ffff;
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff; 
 }
 
 body.dark-mode .button-favorite-custom:hover {
-  color: #00ccff; /* Azul más oscuro al pasar el mouse */
+  color: #00ccff; 
 }
 
 body.dark-mode .navbar {
   background-color: #111 !important;
 }
 
-/* Starfield background */
+
 body.dark-mode::before {
   content: '';
   position: fixed;
@@ -323,24 +321,24 @@ body.dark-mode::before {
   background: url('https://img.freepik.com/fotos-premium/fondo-cielo-estrellado-oscuro_118086-762.jpg') no-repeat center center fixed;
   background-size: cover;
   z-index: -1;
-  opacity: 0.8; /* Ajusta la opacidad según sea necesario */
-  filter: contrast(1.2); /* Añade un poco de contraste */
+  opacity: 0.8; 
+  filter: contrast(1.2); 
 }
 
 body.dark-mode .dark-mode-toggle {
-  background-color: #ffffff; /* Botón blanco brillante */
+  background-color: #ffffff; 
   color: black !important;
-  box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff; /* Efecto de brillo */
+  box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff; 
 }
 
 body.dark-mode .dark-mode-toggle:hover {
-  background-color: #f2f2f2; /* Un poco más oscuro al pasar el mouse */
+  background-color: #f2f2f2; 
 }
 
-/* Ajustes adicionales para botones en modo claro */
+
 .button-custom {
   background-color: #ff6f61;
-  color: white; /* Texto en blanco para modo claro */
+  color: white; 
   border: none;
   border-radius: 30px;
   padding: 10px 25px;
@@ -355,9 +353,9 @@ body.dark-mode .dark-mode-toggle:hover {
   background-color: #ff3b2f;
 }
 
-/* Ajustes específicos para el dropdown en modo claro */
+
 .dropdown-toggle {
-  background-color: #ff6f61 !important; /* Mismo color que el botón de Learn More */
+  background-color: #ff6f61 !important; 
   color: white !important;
   border: none !important;
   border-radius: 30px !important;
@@ -366,28 +364,28 @@ body.dark-mode .dark-mode-toggle:hover {
 }
 
 .dropdown-toggle:hover {
-  background-color: #ff3b2f !important; /* Color más oscuro al pasar el mouse */
+  background-color: #ff3b2f !important; 
 }
 
-/* Ajustes específicos para el dropdown en modo oscuro */
+
 body.dark-mode .dropdown-toggle {
-  background-color: #00ffff !important; /* Azul fluorescente brillante */
-  color: black !important; /* Texto en negro */
-  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff; /* Efecto de brillo */
+  background-color: #00ffff !important; 
+  color: black !important; 
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff; 
 }
 
 body.dark-mode .dropdown-toggle:hover {
-  background-color: #00ccff !important; /* Azul más oscuro al pasar el mouse */
+  background-color: #00ccff !important; 
 }
 
-/* Estilo del título */
+
 .metallic-title {
-  color: rgba(255, 111, 97, 0.8); /* Color base translúcido más vivo */
-  font-family: 'Playfair Display', serif; /* Fuente para el título */
+  color: rgba(255, 111, 97, 0.8); 
+  font-family: 'Playfair Display', serif; 
   position: relative;
   display: inline-block;
   overflow: hidden;
-  font-size: 6em; /* Tamaño del texto */
+  font-size: 6em; 
   font-weight: bold;
   margin: 0;
 }
@@ -399,7 +397,7 @@ body.dark-mode .dropdown-toggle:hover {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.8), transparent); /* Efecto blanco en modo claro */
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.8), transparent); 
   transition: left 0.5s;
 }
 
@@ -407,73 +405,72 @@ body.dark-mode .dropdown-toggle:hover {
   left: 100%;
 }
 
-/* Estilo del título en modo oscuro */
+
 body.dark-mode .metallic-title {
-  color: #00ffff; /* Azul fluorescente brillante */
-  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff; /* Efecto de brillo */
+  color: #00ffff; 
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff; 
 }
 
 body.dark-mode .metallic-title::before {
-  background: linear-gradient(120deg, transparent, rgba(0, 0, 0, 0.8), transparent); /* Efecto más oscuro, casi negro */
+  background: linear-gradient(120deg, transparent, rgba(0, 0, 0, 0.8), transparent); 
 }
 * Estilo del botón de modo oscuro */
 .btn-dark-mode {
-  background-color: #000000; /* Botón negro */
+  background-color: #000000; 
   color: white !important;
   border: none !important;
-  box-shadow: none; /* Sin sombra */
+  box-shadow: none; 
 }
 
-/* Estilo del botón de modo claro */
+
 .btn-light-mode {
-  background-color: #ffffff; /* Botón blanco brillante */
+  background-color: #ffffff; 
   color: black !important;
-  border: 1px solid #ffffff !important; /* Borde del mismo color que el botón */
-  box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff; /* Efecto de brillo */
+  border: 1px solid #ffffff !important; 
+  box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff; 
 }
 
 .btn-light-mode:hover {
-  background-color: #f2f2f2; /* Un poco más oscuro al pasar el mouse */
-
+  background-color: #f2f2f2; 
 }
-/* Botón de Dark Mode */
+
 .dark-mode-toggle {
-  background-color: #333; /* Negro en modo claro */
+  background-color: #333; 
   color: white !important;
-  border: none !important; /* Eliminar el borde */
+  border: none !important; 
   border-radius: 30px !important;
   padding: 10px 20px !important;
   transition: background-color 0.3s !important;
 }
 
 .dark-mode-toggle:hover {
-  background-color: #444; /* Color más claro al pasar el mouse en modo claro */
+  background-color: #444; 
 }
 
-/* Botón de Dark Mode en modo oscuro */
+
 body.dark-mode .dark-mode-toggle {
-  background-color: #ffffff; /* Botón blanco brillante */
+  background-color: #ffffff; 
   color: black !important;
-  box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff; /* Efecto de brillo */
-  border: none !important; /* Eliminar el borde negro */
+  box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff; 
+  border: none !important; 
 }
 
 body.dark-mode .dark-mode-toggle:hover {
-  background-color: #f2f2f2; /* Un poco más oscuro al pasar el mouse */
+  background-color: #f2f2f2; 
 }
-/* Estilos para la tabla de detalles en modo oscuro */
+
 body.dark-mode .detail-table {
-  background-color: rgba(0, 0, 0, 0.6); /* Negro translúcido */
-  color: #ffffff; /* Texto blanco */
+  background-color: rgba(0, 0, 0, 0.6); 
+  color: #ffffff; 
 }
 
 body.dark-mode .detail-table th, 
 body.dark-mode .detail-table td {
-  background-color: rgba(0, 0, 0, 0.6); /* Fondo negro translúcido */
-  color: #ffffff; /* Texto blanco */
-  border-bottom: 1px solid #ffffff; /* Bordes blancos */
+  background-color: rgba(0, 0, 0, 0.6); 
+  color: #ffffff; 
+  border-bottom: 1px solid #ffffff; 
 }
 
 body.dark-mode .detail-table th {
-  background-color: rgba(0, 0, 0, 0.8); /* Negro más oscuro para encabezados */
+  background-color: rgba(0, 0, 0, 0.8); 
 }
