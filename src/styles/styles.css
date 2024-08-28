@@ -474,3 +474,41 @@ body.dark-mode .detail-table td {
 body.dark-mode .detail-table th {
   background-color: rgba(0, 0, 0, 0.8); 
 }
+
+
+@media (max-width: 767px) {
+  .main_heading {
+    font-size: 1.5em; 
+    margin-bottom: 0.5em; 
+  }
+
+  .metallic-title {
+    font-size: 3em; 
+  }
+
+  .navbar .container {
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  .logo-container {
+    margin: 0 auto; 
+    margin-bottom: 10px; 
+  }
+
+  .dark-mode-toggle, 
+  .dropdown-container {
+    margin-bottom: 10px; 
+  }
+
+  .cards_inner {
+    flex-wrap: nowrap; 
+    overflow-x: auto; 
+    gap: 1em; 
+    }
+  
+  .card, .card-custom {
+    width: 80%; 
+     flex: 0 0 auto; 
+  }
+}
